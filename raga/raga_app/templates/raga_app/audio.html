@@ -1,0 +1,33 @@
+ <article class="centered">
+    <h3>{{ audios.title }}</h3>
+    <!-- Display the audio player -->
+    <audio controls>
+        <!-- Provide the URL of the audio file -->
+        <source src="{{ audios.audio.url }}" type="{% if '.mp3' in audios.audio.name %}audio/mpeg{% elif '.wav' in audios.audios.name %}audio/wav{% endif %}">
+        <!-- Provide fallback content if the browser doesn't support the audio tag -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>{{ audios1.title1 }}</h3>
+    <audio controls>
+        <!-- Provide the URL of the audio file -->
+        <source src="{{ audios1.audio1.url }}" type="{% if '.mp3' in audios1.audio1.name %}audio/mpeg{% elif '.wav' in audios1.audios1.name %}audio/wav{% endif %}">
+        <!-- Provide fallback content if the browser doesn't support the audio tag -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <h5>
+        Pitch: {{Output.Pitch}}
+        {% if audios.selected_option == "song" %}
+        {% for key,value in Output.Ragas.items %}
+            <p>Raga:{{key}}</p>
+            <p>Match:{{value}}%</p>
+        <br> 
+        {% endfor %}
+        {% else %}
+        <p>Matched swara is: '{{Output.Swara}}'</p>
+        {% endif %}
+
+    </h5>
+
+</article> 

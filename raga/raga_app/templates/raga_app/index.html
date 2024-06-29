@@ -1,0 +1,11 @@
+{% extends "raga_app/base.html" %}
+
+{% block content %}
+<main>
+    {% with audios=audio %}
+    {% with audios1=audio1 %}
+    {% include 'raga_app/audio.html' %}
+    {% endwith %}
+    {% endwith %}
+</main>
+{% endblock content %}

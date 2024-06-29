@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangeeta Sarangha</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;font-size: 5rem;">Sangeeta Sarangha</h1>
+        <div class="section">
+            <h2 style="font-size: 3rem;">Carnatic raga identifier</h2>
+            <div class="introduction">
+            <p>In the Southern lands where the whispers of classical melodies hold sway, aficionados of Carnatic music succumb to its enchanting allure. Like a symphony of emotions orchestrated by ragas, these melodies unfurl like a tapestry of feelings. Picture a Carnatic raga identifier as a celestial compass, leading minstrels through the labyrinthine paths of notes and harmonies, ensuring a harmonious voyage as they navigate the mystical realms of Carnatic music.</p>
+            <div class="notes-img">
+                <img src="{% static 'images/Music-Notes.jpeg' %}" alt="Music Notes">
+            </div>
+            
+        </div>
+        <div class="images">
+            <img src="{% static 'images/Carnatic-Session.jpeg' %}" alt="Carnatic Music Session">
+            <img src="{% static 'images/Instruments.jpeg' %}" alt="Carnatic Instruments">
+        </div>
+        </div>
+    </div>
+
+    <!-- File Upload Section -->
+    <div class="file-upload">
+        <h2 style="text-align: center;">
+            Click the below button to upload a file
+        </h2>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit">Upload a File</button>
+        </form>
+    </div>
+</body>
+</html>
