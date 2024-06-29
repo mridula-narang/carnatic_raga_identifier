@@ -3,7 +3,7 @@ The user is requested to upload two files, the song whose raga is to be identifi
 The algorithm used in this system identifies all the swaras present in the song using the 'sa' frequency and ratio of each wrt sa defined the ratios.json file. 
 Once this is done, a weighted average of all the swaras is calculated and the percentage match of the raga with its name is displayed to the user. <br>
 
-Requirements:
-Python (Recommended version 3.9 or higher)
-Django 
-Librosa
+Requirements: <br>
+Python (Recommended version 3.9 or higher) <br>
+Django <br>
+Librosa <br>
